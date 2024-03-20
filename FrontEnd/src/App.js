@@ -23,7 +23,7 @@ export default function App() {
   useEffect(() => {
     const fetchDishes = async () => {
       try {
-        const response = await fetch('http://merngfg.vercel.app/getdishes');
+        const response = await fetch('https://merngfg.onrender.com/getdishes');
         const data = await response.json();
         setDishes(data);
       } catch (error) {
@@ -46,7 +46,7 @@ export default function App() {
         console.log("Fetching cart items...");
         if (isLoggedIn) {
             try {
-                const response = await fetch(`https://merngfg.vercel.app/api/cart/${userId}`);
+                const response = await fetch(`https://merngfg.onrender.com/api/cart/${userId}`);
                 if (response.ok) {
                     const cartData = await response.json();
                     console.log("Cart data:", cartData);
