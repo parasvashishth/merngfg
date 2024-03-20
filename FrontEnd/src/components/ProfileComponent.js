@@ -9,7 +9,7 @@ export default function ProfileComponent() {
     useEffect(() => {
         const fetchUserProfile = async () => {
             try {
-                const response = await fetch(`http://localhost:8000/api/users/${userId}`);
+                const response = await fetch(`https://merngfg.onrender.com/api/users/${userId}`);
                 const userData = await response.json();
                 setUser(userData);
             } catch (error) {
