@@ -12,7 +12,7 @@ export default function LoginComponent({ setIsLoggedIn }) {
         const userData = { number, password };
 
         try {
-            const response = await fetch('http://localhost:8000/api/auth/login', {
+            const response = await fetch('https://merngfg.onrender.com/api/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -28,7 +28,7 @@ export default function LoginComponent({ setIsLoggedIn }) {
                 localStorage.setItem('accessToken', responseData.accessToken);
                 localStorage.setItem('userId', responseData.userId); // Save userId
                 // Fetch user's cart data
-            const cartResponse = await fetch(`http://localhost:8000/api/cart/${responseData.userId}`);
+            const cartResponse = await fetch(`https://merngfg.onrender.com/api/cart/${responseData.userId}`);
             const cartData = await cartResponse.json();
             // Store cart items in local storage
             localStorage.setItem('cartItems', JSON.stringify(cartData));
