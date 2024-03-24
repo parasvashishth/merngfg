@@ -94,7 +94,7 @@ export default function App() {
     <Router>
       <div className="App">
         <Header cartItems={cartItems.length} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-        <div className="main-content">
+        <div className="main-content test">
           <Routes>
             <Route path='/home' element={<Home />} />
             <Route path='/login' element={<Login setIsLoggedIn={setIsLoggedIn} />} />
